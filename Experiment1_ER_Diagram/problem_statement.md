@@ -23,30 +23,44 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="869" height="621" alt="image" src="https://github.com/user-attachments/assets/f43b6657-2097-4498-9365-0f03aa6557ba" />
 
 ### Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
+| member | member ID          |details  |
 |        |                    |       |
+|trainer |trainer ID          |trains |
 |        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|session |session ID          |sessions|
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
+|Trainer–Session|    1:M    | Partial       |A trainer can conduct multiple sessions       |
 |              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|Member–Payment| 1:M        | Partial       | A member can make multiple payments      |
 
 ### Assumptions
+- A member must have at least one active membership to enroll in programs or book sessions.
+
+A program can have zero or more trainers and members.
+
+Personal training sessions are separate from regular program classes.
+
+Payments can be for either membership fees or personal sessions, identified by a "Type" field.
+
+Attendance is tracked only for personal training sessions (not group classes).
+
+Each session is one-on-one between a member and a trainer.
 - 
-- 
-- 
+- Each session involves exactly one member and one trainer.
+
+So, Session is a binary relationship between Member and Trainer.
+
+No need for a join table (since it’s not M:N between Members and Trainers for sessions).
 
 ---
 
