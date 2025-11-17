@@ -46,154 +46,172 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---<img width="1157" height="873" alt="image" src="https://github.com/user-attachments/assets/6a3287e6-2161-4f6b-99ff-3b88c6fbcad6" />
+
+Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where supplier ID is 5 in the suppliers table.
+<img width="896" height="445" alt="Screenshot 2025-10-17 103021" src="https://github.com/user-attachments/assets/a5de95d6-5f9d-47b4-a54b-9d75ea444205" />
 
 
-sql
--- <img width="447" height="253" alt="image" src="https://github.com/user-attachments/assets/7e058989-9a46-4d3a-96ba-a3873ffd12a0" />
-
-
+```sql
+UPDATE suppliers
+SET address='58 Lakeview, Magnolia'
+WHERE supplier_id=5;
+```
 
 **Output:**
 
-<img width="1230" height="389" alt="image" src="https://github.com/user-attachments/assets/797b570c-fef6-4564-9da5-bd13e877accb" />
+<img width="1345" height="165" alt="Screenshot 2025-10-17 103343" src="https://github.com/user-attachments/assets/f17574d5-82a3-4719-84e5-c5f6bd88e190" />
 
 
 **Question 2**
----
--- <img width="1417" height="661" alt="image" src="https://github.com/user-attachments/assets/42af60c8-8c1c-4c45-802b-6c0adfc744fe" />
+
+Write a SQL statement to Update the grade of all customers in Chennai city as  5. 
 
 
-sql
--- <img width="458" height="172" alt="image" src="https://github.com/user-attachments/assets/052b1634-b80b-4027-bd7d-140d71736a6b" />
+<img width="707" height="77" alt="Screenshot 2025-10-17 103936" src="https://github.com/user-attachments/assets/845788be-ff27-48cc-9094-77692d1d2e41" />
 
 
+```sql
+UPDATE Customer
+SET grade=5
+WHERE city='Chennai';
+```
 
 **Output:**
 
-<img width="1206" height="509" alt="image" src="https://github.com/user-attachments/assets/23c5d6cc-bbfd-4824-a703-23c2c3036cf4" />
-
+<img width="1271" height="350" alt="Screenshot 2025-10-17 104039" src="https://github.com/user-attachments/assets/f4bba189-2a4e-4dae-97b0-3ac7676b2ecb" />
 
 **Question 3**
----
--- <img width="1234" height="556" alt="image" src="https://github.com/user-attachments/assets/2dc74243-133d-40c0-b4c2-bb7f3e89d8ec" />
+
+Write a SQL statement to change salary of employee to 8000 whose Employee ID is 105, if the existing salary is less than 5000.
+
+<img width="1067" height="481" alt="Screenshot 2025-10-17 104212" src="https://github.com/user-attachments/assets/10697f42-8dfa-467d-8c6d-0d3dd20fdd0c" />
 
 
-sql
--- <img width="414" height="151" alt="image" src="https://github.com/user-attachments/assets/133f9a45-2efb-4e86-9611-a04ecc466fb5" />
-
-
+```sql
+UPDATE Employees
+SET salary=8000
+WHERE employee_id=105 AND salary<5000;
+```
 
 **Output:**
 
-<img width="1222" height="391" alt="image" src="https://github.com/user-attachments/assets/a4ed1422-63d9-497c-9506-d27dbf081e5d" />
+<img width="1260" height="143" alt="Screenshot 2025-10-17 104305" src="https://github.com/user-attachments/assets/ac34be38-b98c-49cd-828e-104d2dba4529" />
 
 **Question 4**
----
--- <img width="1110" height="335" alt="image" src="https://github.com/user-attachments/assets/31bdaca0-e4b8-4dce-aeb9-1326e4c45f98" />
+
+Write a SQL statement to double the availability of the product with product_id 1.
+
+<img width="708" height="212" alt="Screenshot 2025-10-17 104350" src="https://github.com/user-attachments/assets/1f72e0ea-37bb-4b09-b8cc-df285ab36171" />
 
 
-sql
--- <img width="418" height="131" alt="image" src="https://github.com/user-attachments/assets/d10c227a-d584-430e-836e-35672e1006ec" />
-
-
+```sql
+UPDATE products
+SET availability=availability*2
+WHERE product_id=1;
+```
 
 **Output:**
 
-<img width="1220" height="631" alt="image" src="https://github.com/user-attachments/assets/e62ea690-1c70-4eba-84e6-c5aa73469232" />
+<img width="1185" height="193" alt="Screenshot 2025-10-17 104520" src="https://github.com/user-attachments/assets/e24ff502-9503-4343-8da0-3792ecbda71a" />
+
 
 
 **Question 5**
----
--- <img width="1390" height="639" alt="image" src="https://github.com/user-attachments/assets/d0a30fe2-0aed-4db9-bbe2-959fa7147ff2" />
+
+Write a SQL statement to Update the reorder level to 20 where the quantity in stock is less than 10 and product category is 'Snacks' in the products table.
+
+<img width="1167" height="426" alt="Screenshot 2025-10-17 104624" src="https://github.com/user-attachments/assets/c2a661ca-84cb-4196-8c08-7e4150b454e6" />
 
 
-sql
--- <img width="433" height="190" alt="image" src="https://github.com/user-attachments/assets/7910ec85-062b-4e63-8184-e513e9fb8b44" />
-
-
+```sql
+UPDATE products
+SET reorder_lvl=20
+WHERE quantity<10 AND category='Snacks';
+```
 
 **Output:**
 
-<img width="1232" height="357" alt="image" src="https://github.com/user-attachments/assets/a1194daa-c5c4-4773-8067-a71d0b55e4a3" />
+<img width="1206" height="274" alt="Screenshot 2025-10-17 104726" src="https://github.com/user-attachments/assets/ccc269c2-9461-43a0-91e4-4bb1c3048265" />
 
 
 **Question 6**
----
--- <img width="1384" height="514" alt="image" src="https://github.com/user-attachments/assets/4c6458b5-c05a-45b8-9e3d-0ec0c5d8efb7" />
+
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is odd.
+
+<img width="1026" height="319" alt="Screenshot 2025-10-17 104831" src="https://github.com/user-attachments/assets/37ebc924-818a-4e1b-9725-473a6698c7a5" />
 
 
-sql
---<img width="388" height="183" alt="image" src="https://github.com/user-attachments/assets/571a9731-225f-4d0e-bdc7-d77e2ba774a7" />
-
-
+```sql
+DELETE FROM customer WHERE GRADE%2!=0
+```
 
 **Output:**
 
-<img width="1226" height="510" alt="image" src="https://github.com/user-attachments/assets/dbf4fcc7-0045-442a-ac10-2af68fe99cab" />
+<img width="1884" height="261" alt="Screenshot 2025-10-17 104942" src="https://github.com/user-attachments/assets/ae6633ec-3acb-424b-9a60-03086206e1c2" />
 
 
 **Question 7**
----
--- <img width="1397" height="569" alt="image" src="https://github.com/user-attachments/assets/1eb5c2fa-d85f-437f-8974-9074add1c8e1" />
+
+Write a SQL query to Delete All Doctors with a NULL Last Name
+
+<img width="811" height="544" alt="Screenshot 2025-10-17 105044" src="https://github.com/user-attachments/assets/cc0d5233-3ac0-44eb-be0b-dd6aa5d10ae0" />
 
 
-sql
---<img width="444" height="130" alt="image" src="https://github.com/user-attachments/assets/174eb061-5091-41db-9fa3-83ad4f024a01" />
-
-
+```sql
+DELETE FROM doctors WHERE last_name is NULL;
+```
 
 **Output:**
 
-<img width="1226" height="567" alt="image" src="https://github.com/user-attachments/assets/e153350f-3d05-4cfe-89b0-6fde7f32ae5d" />
+<img width="1154" height="644" alt="Screenshot 2025-10-17 105131" src="https://github.com/user-attachments/assets/6eecb09d-add4-411c-82ea-afd4a7c687ac" />
 
 
 **Question 8**
----
--- <img width="1407" height="482" alt="image" src="https://github.com/user-attachments/assets/9e8958df-bcda-404e-bd98-0e1b6e0198f9" />
 
+Write a SQL query to Delete All Doctors whose ID ranges from 2 to 4.
 
-sql
--- <img width="492" height="129" alt="image" src="https://github.com/user-attachments/assets/42ae1bd7-4d7c-4959-ac8e-25b909c1ef5b" />
+<img width="685" height="415" alt="Screenshot 2025-10-17 105208" src="https://github.com/user-attachments/assets/5083683c-c44f-4b25-b929-e34f69445b54" />
 
-
+```sql
+DELETE FROM doctors WHERE doctor_id BETWEEN 2 AND 4;
+```
 
 **Output:**
 
-<img width="1209" height="411" alt="image" src="https://github.com/user-attachments/assets/80d33c42-fbd1-486b-8383-e29a7c93aee7" />
+<img width="1183" height="754" alt="Screenshot 2025-10-17 105254" src="https://github.com/user-attachments/assets/adfe6092-eef8-4637-b868-246962395ba9" />
 
 
 **Question 9**
----
--- <img width="1396" height="565" alt="image" src="https://github.com/user-attachments/assets/806b9296-0bb2-4549-9aa4-75d968c46904" />
+
+Write a SQL query to Delete a Specific Surgery whose ID is 3 or surgeon ID is 4.
+
+<img width="806" height="580" alt="Screenshot 2025-10-17 105332" src="https://github.com/user-attachments/assets/72fee2ab-be83-408d-ad87-bb94a2f162ec" />
 
 
-sql
--- <img width="563" height="154" alt="image" src="https://github.com/user-attachments/assets/6a5ff7fe-11a7-41da-9afb-4a5913a9dc3b" />
-
-
+```sql
+DELETE FROM surgeries WHERE surgery_id=3 OR surgeon_id=4;
+```
 
 **Output:**
 
-<img width="1197" height="441" alt="image" src="https://github.com/user-attachments/assets/3083d0ad-7e81-473b-8875-f682bd85e0f3" />
+<img width="1159" height="810" alt="Screenshot 2025-10-17 105425" src="https://github.com/user-attachments/assets/261234ad-6f80-4111-afff-e347385f621a" />
+
 
 **Question 10**
----
--- <img width="1409" height="523" alt="image" src="https://github.com/user-attachments/assets/9c5bf156-9d31-4cce-9862-b41e6a163ba5" />
+
+Write a SQL query to Delete customers from 'customer' table where 'CUST_CITY' is not 'New York' and 'OUTSTANDING_AMT' is greater than 5000
+
+<img width="1242" height="372" alt="Screenshot 2025-10-17 105520" src="https://github.com/user-attachments/assets/61003f1b-cd93-448b-bb62-bf1c67c4b13a" />
 
 
-sql
--- <img width="787" height="140" alt="image" src="https://github.com/user-attachments/assets/25721932-44b4-4a89-8343-8a31dcaa18b6" />
-
-
+```sql
+DELETE FROM customer WHERE CUST_CITY!='New York'AND OUTSTANDING_AMT>5000;
+```
 
 **Output:**
 
-<img width="1213" height="677" alt="image" src="https://github.com/user-attachments/assets/6d54063f-38f4-458e-b59b-2e7240936b9f" />
+<img width="1722" height="324" alt="Screenshot 2025-10-17 105647" src="https://github.com/user-attachments/assets/4773466e-8c2d-4561-8edb-2d342a01a023" />
 
 
 ## RESULT
-<img width="1416" height="168" alt="image" src="https://github.com/user-attachments/assets/73a93c0b-b23d-4be3-a6a9-b10d731d3888" />
-
-
 Thus, the SQL queries to implement DML commands have been executed successfully.
